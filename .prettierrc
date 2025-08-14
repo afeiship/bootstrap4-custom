@@ -1,0 +1,4 @@
+{
+  "extends": "@jswork/style-guide",
+  "printWidth": 80
+}
