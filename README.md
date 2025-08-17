@@ -3,3 +3,4 @@
 
 ## resources
 - https://v3.tailwindcss.com/
+- http://localhost:3000/docs/
