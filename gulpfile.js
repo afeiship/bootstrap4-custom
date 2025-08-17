@@ -6,6 +6,9 @@ import size from 'gulp-size';
 
 // 创建 sass 编译器实例（传入 sass 模块）
 const gulpSassInstance = gulpSass(sass); // 注意：传的是整个 `sass` 命名空间
+const outputStyle = process.env.sass_output_style;
+
+console.log("current env: ", process.env.bs_version, outputStyle);
 
 const sassOptions = {
   silenceDeprecations: [
@@ -15,7 +18,7 @@ const sassOptions = {
     'global-builtin',
     'import'
   ],
-  outputStyle: 'compressed',
+  outputStyle,
   indentType: 'space',
   indentWidth: 2,
   includePaths: ['./node_modules']
@@ -29,14 +32,16 @@ gulp.task('sass', function () {
   return gulp
     .src('lib/*.scss')
     .pipe(gulpSassInstance(sassOptions).on('error', gulpSassInstance.logError))
-    .pipe(
-      size({
-        showFiles: true, // ✅ 显示每个文件名和大小
-        gzip: true, // 可选：显示 gzip 后大小
-        title: 'CSS 编译输出:' // 可选：加个标题，便于识别
-      })
-    )
+    .pipe(size())
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('sass:watch', function () {
+  gulp.watch('lib/**/*.scss', gulp.series('sass'));
+});
+
+// dev
+gulp.task('dev', gulp.series(['sass', 'sass:watch']));
+
+// build
 gulp.task('default', gulp.series(['clean', 'sass']));
