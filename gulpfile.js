@@ -7,8 +7,9 @@ import size from 'gulp-size';
 // 创建 sass 编译器实例（传入 sass 模块）
 const gulpSassInstance = gulpSass(sass); // 注意：传的是整个 `sass` 命名空间
 const outputStyle = process.env.sass_output_style;
+const sassSource = process.env.sass_source;
 
-console.log("current env: ", process.env.bs_version, outputStyle);
+console.log('current env: ', process.env.bs_version, outputStyle);
 
 const sassOptions = {
   silenceDeprecations: [
@@ -30,7 +31,7 @@ gulp.task('clean', function () {
 
 gulp.task('sass', function () {
   return gulp
-    .src('lib/*.scss')
+    .src(sassSource)
     .pipe(gulpSassInstance(sassOptions).on('error', gulpSassInstance.logError))
     .pipe(size())
     .pipe(gulp.dest('dist'));
@@ -41,7 +42,7 @@ gulp.task('sass:watch', function () {
 });
 
 // dev
-gulp.task('dev', gulp.series(['sass', 'sass:watch']));
+gulp.task('dev', gulp.series(['clean', 'sass', 'sass:watch']));
 
 // build
 gulp.task('default', gulp.series(['clean', 'sass']));
