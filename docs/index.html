@@ -7,9 +7,16 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <!--  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
+<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"></script>-->
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.7/js/bootstrap.bundle.min.js"></script> -->
   <link rel="stylesheet" href="/dist/lite.css">
+  <style>
+      /* 强制修复 Bootstrap 的 collapse 样式 */
+      .collapse.show {
+          visibility: visible;
+      }
+  </style>
 </head>
 <body>
 <div class="flex flex-col gap-4 w-3/4 p-5 bg-gray-100 rounded-md mx-auto *:border-1 *:border-solid *:border-gray-300">
@@ -46,7 +53,7 @@
     </nav>
   </section>
   <section class="w-[400px] mx-auto">
-    <div id="swiper1" class="carousel slide" data-ride="carousel">
+    <div id="swiper1" class="carousel slide border border-1 rounded-lg overflow-hidden" data-ride="carousel" data-interval="6000">
       <ol class="carousel-indicators">
         <li data-target="#swiper1" data-slide-to="0" class="active"></li>
         <li data-target="#swiper1" data-slide-to="1"></li>
@@ -71,6 +78,32 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </button>
+    </div>
+  </section>
+  <section>
+    <p class="border border-1">
+      <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button"
+         aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2"
+              aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element
+      </button>
+      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse"
+              aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements
+      </button>
+    </p>
+    <div class="flex flex-col">
+      <div class="collapse multi-collapse" id="multiCollapseExample1">
+        <div class="card card-body">
+          Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden
+          by default but revealed when the user activates the relevant trigger.
+        </div>
+      </div>
+      <div class="collapse multi-collapse" id="multiCollapseExample2">
+        <div class="card card-body">
+          Some placeholder content for the second collapse component of this multi-collapse example. This panel is
+          hidden by default but revealed when the user activates the relevant trigger.
+        </div>
+      </div>
     </div>
   </section>
   <section>
