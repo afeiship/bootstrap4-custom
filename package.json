@@ -1,6 +1,6 @@
 {
   "name": "@jswork/bootstrap4-custom",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "A lightweight, customizable Bootstrap 4 partial import package.",
   "prettier": "@jswork/style-guide",
@@ -37,7 +37,8 @@
   },
   "keywords": [
     "bootstrap",
-    "jquery",
-    "custom"
+    "custom",
+    "twbs",
+    "jquery"
   ]
 }
