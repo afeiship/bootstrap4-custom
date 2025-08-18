@@ -16,17 +16,24 @@
       .collapse.show {
           visibility: visible;
       }
+
+      .ui-card {
+          background: white;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+          border-radius: 0.5rem;
+          padding: 1rem;
+      }
   </style>
 </head>
 <body>
 <div class="flex flex-col gap-4 w-3/4 p-5 bg-gray-100 rounded-md mx-auto *:border-1 *:border-solid *:border-gray-300">
-  <section>
+  <section class="ui-card">
     <button class="btn btn-primary">Button Primary</button>
     <button class="btn btn-secondary">Button Secondary</button>
     <button class="btn btn-success">Button Success</button>
     <button class="btn btn-danger">Button Danger</button>
   </section>
-  <section>
+  <section class="ui-card">
     <div class="btn-group" role="group" aria-label="Basic example">
       <button type="button" class="btn btn-primary">Left</button>
       <button type="button" class="btn btn-primary">Middle</button>
@@ -43,7 +50,7 @@
     <span class="badge badge-pill badge-light">Light</span>
     <span class="badge badge-pill badge-dark">Dark</span>
   </section>
-  <section>
+  <section class="ui-card">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -81,7 +88,7 @@
       </button>
     </div>
   </section>
-  <section>
+  <section class="ui-card">
     <p class="border border-1">
       <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button"
          aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
@@ -107,7 +114,7 @@
       </div>
     </div>
   </section>
-  <section>
+  <section class="ui-card">
     <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
         Dropdown button
@@ -119,8 +126,8 @@
       </div>
     </div>
   </section>
-  <section>
-    <form class="bg-white rounded-lg p-4 shadow-md">
+  <section class="ui-card">
+    <form>
       <div class="form-group">
         <label for="exampleInputEmail1">Email address</label>
         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -137,7 +144,7 @@
       <button type="submit" class="btn btn-primary w-full">Submit</button>
     </form>
   </section>
-  <section>
+  <section class="ui-card">
     <div class="alert alert-primary" role="alert">
       A simple primary alert—check it out!
     </div>
@@ -145,7 +152,7 @@
       A simple secondary alert—check it out!
     </div>
   </section>
-  <section>
+  <section class="ui-card">
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
       Launch demo modal
@@ -171,21 +178,7 @@
       </div>
     </div>
   </section>
-  <section>
-    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-      Tooltip on top
-    </button>
-    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
-      Tooltip on right
-    </button>
-    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
-      Tooltip on bottom
-    </button>
-    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
-      Tooltip on left
-    </button>
-  </section>
-  <section>
+  <section class="ui-card">
     <form class="row g-3">
       <div class="col-md-6">
         <label for="inputEmail4" class="form-label">Email</label>
@@ -231,13 +224,53 @@
       </div>
     </form>
   </section>
-  <section>
+  <section class="ui-card">
+    <div class="media">
+      <img src="https://dummyimage.com/100" class="mr-3" alt="...">
+      <div class="media-body">
+        <h5 class="mt-0">Media heading</h5>
+        <p>Standing on the frontline when the bombs start to fall. Heaven is jealous of our love, angels are crying from
+          up above. Can't replace you with a million rings. Boy, when you're with me I'll give you a taste. There’s no
+          going back. Before you met me I was alright but things were kinda heavy. Heavy is the head that wears the
+          crown.</p>
+        <div class="media mt-3">
+          <a class="mr-3" href="#">
+            <img src="https://dummyimage.com/100" alt="...">
+          </a>
+          <div class="media-body">
+            <h5 class="mt-0">Media heading</h5>
+            <p>Greetings loved ones let's take a journey. Yes, we make angels cry, raining down on earth from up above.
+              Give you something good to celebrate. I used to bite my tongue and hold my breath. I'm ma get your heart
+              racing in my skin-tight jeans. As I march alone to a different beat. Summer after high school when we
+              first met. You're so hypnotizing, could you be the devil? Could you be an angel? It's time to bring out
+              the big balloons. Thought that I was the exception. Bikinis, zucchinis, Martinis, no weenies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ui-card">
     <div class="spinner-border text-pink-600" role="status">
     </div>
   </section>
-  <section>
+  <section class="ui-card">
+    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+      Tooltip on top
+    </button>
+    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right"
+            title="Tooltip on right">
+      Tooltip on right
+    </button>
+    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom"
+            title="Tooltip on bottom">
+      Tooltip on bottom
+    </button>
+    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+      Tooltip on left
+    </button>
+  </section>
+  <section class="ui-card">
     <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
-
     <div class="fixed bottom-0 right-0 p-3" style="z-index: 5; right: 0; bottom: 0;">
       <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-delay="2000">
         <div class="toast-header">
@@ -254,13 +287,36 @@
       </div>
     </div>
   </section>
+  <section class="ui-card">
+    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top"
+            data-content="Top popover">
+      Popover on top
+    </button>
+    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right"
+            data-content="Right popover">
+      Popover on right
+    </button>
+    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom"
+            data-content="Bottom popover">
+      Popover on bottom
+    </button>
+    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left"
+            data-content="Left popover">
+      Popover on left
+    </button>
+  </section>
   <script>
     $(function () {
       $('[data-toggle="tooltip"]').tooltip()
     })
 
-    $('#liveToastBtn').click(()=>{
-        $('.toast').toast('show');
+    $('#liveToastBtn').click(() => {
+      $('.toast').toast('show')
+    })
+    // popover
+    $('[data-toggle="popover"]').popover({
+      trigger: 'focus',
+      html: true
     })
   </script>
 </div>
