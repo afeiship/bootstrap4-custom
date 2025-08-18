@@ -8,7 +8,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <!--  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
-<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"></script>-->
+  <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"></script>-->
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.7/js/bootstrap.bundle.min.js"></script> -->
   <link rel="stylesheet" href="/dist/lite.css">
   <style>
@@ -53,7 +53,8 @@
     </nav>
   </section>
   <section class="w-[400px] mx-auto">
-    <div id="swiper1" class="carousel slide border border-1 rounded-lg overflow-hidden" data-ride="carousel" data-interval="6000">
+    <div id="swiper1" class="carousel slide border border-1 rounded-lg overflow-hidden" data-ride="carousel"
+         data-interval="6000">
       <ol class="carousel-indicators">
         <li data-target="#swiper1" data-slide-to="0" class="active"></li>
         <li data-target="#swiper1" data-slide-to="1"></li>
@@ -119,6 +120,24 @@
     </div>
   </section>
   <section>
+    <form class="bg-white rounded-lg p-4 shadow-md">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary w-full">Submit</button>
+    </form>
+  </section>
+  <section>
     <div class="alert alert-primary" role="alert">
       A simple primary alert—check it out!
     </div>
@@ -153,9 +172,17 @@
     </div>
   </section>
   <section>
-    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-custom-class="custom-tooltip" data-bs-title="This top tooltip is themed via CSS variables.">
-      Custom tooltip
+    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+      Tooltip on top
+    </button>
+    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+      Tooltip on right
+    </button>
+    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+      Tooltip on bottom
+    </button>
+    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+      Tooltip on left
     </button>
   </section>
   <section>
@@ -208,6 +235,11 @@
     <div class="spinner-border text-pink-600" role="status">
     </div>
   </section>
+  <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
 </div>
 </body>
 </html>
