@@ -38,3 +38,8 @@
 @import "bootstrap/scss/popover";
 @import "bootstrap/scss/carousel";
 @import "bootstrap/scss/spinners";
+
+/* 强制修复 Bootstrap 的 collapse 样式 */
+.collapse.show {
+  visibility: visible;
+}
