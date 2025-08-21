@@ -16,6 +16,10 @@ html {
   box-sizing: inherit;
 }
 
+$grid-columns:      12;
+$grid-gutter-width: 20px;
+
+
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
 
